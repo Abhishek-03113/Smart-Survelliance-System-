@@ -3,7 +3,7 @@ A smart survelliance system web application written in python using Flask web fr
 
 
 download the pretrained model and paste it inside the Models directory 
-[Link text]https://drive.google.com/file/d/1uotQLXe-U7ETlNk5sKo9RfOEMI8ucrGy/view?usp=sharing 
+- https://drive.google.com/file/d/1uotQLXe-U7ETlNk5sKo9RfOEMI8ucrGy/view?usp=sharing 
 
 
 To run the application : 
