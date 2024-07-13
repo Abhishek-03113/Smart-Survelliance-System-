@@ -8,6 +8,7 @@ from flask_login import (
     logout_user,
     current_user,
 )
+# from torch._C import Decl
 from ultralytics import YOLO
 import cv2 as cv
 
@@ -74,7 +75,9 @@ def generate_frames():
         if not success:
             break
         else:
-            detections = model(frame)[0]
+            detections = model.track(source=frame,show=True,save=False,persist=True,tracker="botsort.yaml")[0]
+            # print(detections.ids)
+
             for data in detections.boxes.data.tolist():
                 # extract the confidence (i.e., probability) associated with the detection
                 confidence = data[4]
